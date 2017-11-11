@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="追忆," />
+  <meta name="keywords" content="HTML,JavaScript,CSS,jQuery," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="喝最烈的酒，写最毒的码">
-<meta name="keywords" content="追忆">
+<meta name="description" content="jGrowl 用于制作消息弹出框的 jQuery 插件。产生效果的类似于 Mac OSX 系统中 Growl 事件通知框架。">
+<meta name="keywords" content="HTML,JavaScript,CSS,jQuery">
 <meta property="og:type" content="article">
-<meta property="og:title" content="你好，我叫 HZD4502237">
-<meta property="og:url" content="http://yoursite.com/2017/11/10/你好，我叫-HZD4502237/index.html">
+<meta property="og:title" content="JGrowl 气泡提示框插件的使用">
+<meta property="og:url" content="http://yoursite.com/2017/03/14/JGrowl-气泡提示框插件的使用/index.html">
 <meta property="og:site_name" content="葬爱家族丶冷少">
-<meta property="og:description" content="喝最烈的酒，写最毒的码">
+<meta property="og:description" content="jGrowl 用于制作消息弹出框的 jQuery 插件。产生效果的类似于 Mac OSX 系统中 Growl 事件通知框架。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-11T01:00:54.313Z">
+<meta property="og:updated_time" content="2017-11-11T01:16:43.530Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="你好，我叫 HZD4502237">
-<meta name="twitter:description" content="喝最烈的酒，写最毒的码">
+<meta name="twitter:title" content="JGrowl 气泡提示框插件的使用">
+<meta name="twitter:description" content="jGrowl 用于制作消息弹出框的 jQuery 插件。产生效果的类似于 Mac OSX 系统中 Growl 事件通知框架。">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/11/10/你好，我叫-HZD4502237/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/03/14/JGrowl-气泡提示框插件的使用/"/>
 
 
 
 
 
-  <title>你好，我叫 HZD4502237 | 葬爱家族丶冷少</title>
+  <title>JGrowl 气泡提示框插件的使用 | 葬爱家族丶冷少</title>
   
 
 
@@ -263,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/10/你好，我叫-HZD4502237/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/14/JGrowl-气泡提示框插件的使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="姜咏康">
@@ -280,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">你好，我叫 HZD4502237</h1>
+          <h1 class="post-title" itemprop="name headline">JGrowl 气泡提示框插件的使用</h1>
         
 
         <div class="post-meta">
@@ -292,8 +292,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-10T12:24:29+08:00">
-                2017-11-10
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-14T14:02:01+08:00">
+                2017-03-14
               </time>
             
 
@@ -315,8 +315,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/PLA/" itemprop="url" rel="index">
-                    <span itemprop="name">PLA</span>
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
                   </a>
                 </span>
 
@@ -352,7 +352,14 @@
       
 
       
-        
+        <p><code>jGrowl</code> 用于制作消息弹出框的 <code>jQuery</code> 插件。产生效果的类似于 <code>Mac OSX</code> 系统中 <code>Growl</code> 事件通知框架。<br><a id="more"></a></p>
+<h4 id="导入必须的文件"><a href="#导入必须的文件" class="headerlink" title="导入必须的文件"></a>导入必须的文件</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;link href=<span class="string">"jquery.jgrowl.min.css"</span> rel=<span class="string">"stylesheet"</span> /&gt;</span><br><span class="line">&lt;script src=<span class="string">"jquery-3.1.0.min.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src=<span class="string">"jquery.jgrowl.min.js"</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="Sample-1：提示后自动消息"><a href="#Sample-1：提示后自动消息" class="headerlink" title="Sample 1：提示后自动消息"></a>Sample 1：提示后自动消息</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$.jGrowl(<span class="string">"Hello world!"</span>);</span><br></pre></td></tr></table></figure>
+<h4 id="Sample-2：需要用户手动关闭"><a href="#Sample-2：需要用户手动关闭" class="headerlink" title="Sample 2：需要用户手动关闭"></a>Sample 2：需要用户手动关闭</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$.jGrowl(<span class="string">"Stick this!"</span>, &#123; <span class="attr">sticky</span>: <span class="literal">true</span> &#125;);</span><br></pre></td></tr></table></figure>
+<h4 id="Sample-3：增加标题"><a href="#Sample-3：增加标题" class="headerlink" title="Sample 3：增加标题"></a>Sample 3：增加标题</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$.jGrowl(<span class="string">"A message with a header"</span>, &#123; <span class="attr">header</span>: <span class="string">'Important'</span> &#125;);</span><br></pre></td></tr></table></figure>
+<h4 id="Sample-4：指定在10秒后自动消失"><a href="#Sample-4：指定在10秒后自动消失" class="headerlink" title="Sample 4：指定在10秒后自动消失"></a>Sample 4：指定在10秒后自动消失</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$.jGrowl(<span class="string">"A message that will live a little longer."</span>, &#123; <span class="attr">life</span>: <span class="number">10000</span> &#125;);</span><br></pre></td></tr></table></figure>
+<h4 id="Sample-5：消失后有回调事件"><a href="#Sample-5：消失后有回调事件" class="headerlink" title="Sample 5：消失后有回调事件"></a>Sample 5：消失后有回调事件</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$.jGrowl(<span class="string">"A message with a beforeOpen callback and a different opening animation."</span>, &#123;</span><br><span class="line">  beforeClose: <span class="function"><span class="keyword">function</span>(<span class="params">e,m</span>) </span>&#123;</span><br><span class="line">    alert(<span class="string">'About to close this notification!'</span>);</span><br><span class="line">  &#125;,</span><br><span class="line">  animateOpen: &#123;</span><br><span class="line">    height: <span class="string">'show'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -369,7 +376,13 @@
       
         <div class="post-tags">
           
-            <a href="/tags/追忆/" rel="tag"># 追忆</a>
+            <a href="/tags/HTML/" rel="tag"># HTML</a>
+          
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          
+            <a href="/tags/CSS/" rel="tag"># CSS</a>
+          
+            <a href="/tags/jQuery/" rel="tag"># jQuery</a>
           
         </div>
       
@@ -382,18 +395,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/30/node-js-安装与配置/" rel="next" title="node.js 安装与配置">
-                <i class="fa fa-chevron-left"></i> node.js 安装与配置
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/11/10/Ruby-分页-Gem-Kaminari/" rel="prev" title="Ruby 分页 Gem Kaminari">
-                Ruby 分页 Gem Kaminari <i class="fa fa-chevron-right"></i>
+              <a href="/2017/03/14/SpringBoot-中-JdbcTemplate-的常用操作/" rel="prev" title="SpringBoot 中 JdbcTemplate 的常用操作">
+                SpringBoot 中 JdbcTemplate 的常用操作 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -446,8 +455,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -527,6 +545,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#导入必须的文件"><span class="nav-number">1.</span> <span class="nav-text">导入必须的文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sample-1：提示后自动消息"><span class="nav-number">2.</span> <span class="nav-text">Sample 1：提示后自动消息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sample-2：需要用户手动关闭"><span class="nav-number">3.</span> <span class="nav-text">Sample 2：需要用户手动关闭</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sample-3：增加标题"><span class="nav-number">4.</span> <span class="nav-text">Sample 3：增加标题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sample-4：指定在10秒后自动消失"><span class="nav-number">5.</span> <span class="nav-text">Sample 4：指定在10秒后自动消失</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sample-5：消失后有回调事件"><span class="nav-number">6.</span> <span class="nav-text">Sample 5：消失后有回调事件</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
