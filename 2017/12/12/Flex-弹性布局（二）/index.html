@@ -87,14 +87,10 @@
 <meta property="og:site_name" content="葬爱家族丶冷少">
 <meta property="og:description" content="在这一章节，会具体的描述主轴和交叉轴上的对齐方式。以及如何更简便的实现一个垂直居中效果。全局的 CSS 属性和上一章节相同，HTML 略做修改，如下：">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2017/12/12/Flex-弹性布局（二）/justify_content.png">
-<meta property="og:image" content="http://yoursite.com/2017/12/12/Flex-弹性布局（二）/align_items.png">
-<meta property="og:image" content="http://yoursite.com/2017/12/12/Flex-弹性布局（二）/abs_center.png">
 <meta property="og:updated_time" content="2017-12-12T01:22:50.843Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Flex 弹性布局（二）">
 <meta name="twitter:description" content="在这一章节，会具体的描述主轴和交叉轴上的对齐方式。以及如何更简便的实现一个垂直居中效果。全局的 CSS 属性和上一章节相同，HTML 略做修改，如下：">
-<meta name="twitter:image" content="http://yoursite.com/2017/12/12/Flex-弹性布局（二）/justify_content.png">
 
 
 
@@ -368,7 +364,7 @@
 </ul>
 <p>示例代码如下：</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.main</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">margin-bottom</span>: <span class="number">5px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.row-one</span> &#123;</span><br><span class="line">  <span class="attribute">justify-content</span>: flex-start;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.row-two</span> &#123;</span><br><span class="line">  <span class="attribute">justify-content</span>: flex-end;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.row-three</span> &#123;</span><br><span class="line">  <span class="attribute">justify-content</span>: center;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.row-four</span> &#123;</span><br><span class="line">  <span class="attribute">justify-content</span>: space-between;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.row-five</span> &#123;</span><br><span class="line">  <span class="attribute">justify-content</span>: space-around;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<img src="/2017/12/12/Flex-弹性布局（二）/justify_content.png" title="横向的对齐方式">
+
 <h3 id="align-items-属性"><a href="#align-items-属性" class="headerlink" title="align-items 属性"></a>align-items 属性</h3><p><code>align-items</code> 属性定义项目在交叉轴上如何对齐。也就是纵向的对齐方式，该属性一共有 <code>6</code> 种取值。</p>
 <ul>
 <li><code>flex-start</code> 交叉轴的起点对齐。</li>
@@ -379,10 +375,10 @@
 </ul>
 <p>示例代码如下：</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">main</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">margin-bottom</span>: <span class="number">3px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.main</span> <span class="selector-tag">div</span><span class="selector-pseudo">:nth-of-type(1)</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.main</span> <span class="selector-tag">div</span><span class="selector-pseudo">:nth-of-type(2)</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">30px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.main</span> <span class="selector-tag">div</span><span class="selector-pseudo">:nth-of-type(3)</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">80px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.row-one</span> &#123;</span><br><span class="line">  <span class="attribute">align-items</span>: flex-start;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.row-two</span> &#123;</span><br><span class="line">  <span class="attribute">align-items</span>: flex-end;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.row-three</span> &#123;</span><br><span class="line">  <span class="attribute">align-items</span>: center;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.row-four</span> &#123;</span><br><span class="line">  <span class="attribute">align-items</span>: stretch;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.row-five</span> &#123;</span><br><span class="line">  <span class="attribute">align-items</span>: baseline;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<img src="/2017/12/12/Flex-弹性布局（二）/align_items.png" title="纵向的对齐方式">
+
 <h3 id="用-flex-实现绝对居中"><a href="#用-flex-实现绝对居中" class="headerlink" title="用 flex 实现绝对居中"></a>用 flex 实现绝对居中</h3><p>用 <code>flex</code> 布局实现居中，简直不要太简便。三行属性代码就可以轻松搞定。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"main"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item"</span> <span class="attr">style</span>=<span class="string">"background-color: #C6E48B;"</span>&gt;</span>A<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.main</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">align-items</span>: center;     <span class="comment">/* 定义横向对齐方式为居中 */</span></span><br><span class="line">  <span class="attribute">justify-content</span>: center; <span class="comment">/* 定义纵向对齐方式为居中 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<img src="/2017/12/12/Flex-弹性布局（二）/abs_center.png" title="绝对居中">
+
       
     </div>
     
@@ -421,6 +417,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/12/13/Java8-lambda-expression/" rel="prev" title="Java8 lambda expression">
+                Java8 lambda expression <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -501,7 +501,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">58</span>
+                  <span class="site-state-item-count">59</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -626,7 +626,7 @@
 <span class="post-meta-divider">|</span>
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共32.2k字</span>
+  <span class="post-count">博客全站共33.0k字</span>
 </div>
 
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
